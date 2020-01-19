@@ -1,0 +1,11 @@
+extends layout
+block content
+    p
+        h2 This is friends
+        ul
+        each name in friends    
+            li #{name}
+    p 
+        form(action="/addfriend", method="post")
+            input(type="text", name="newfriend", placeholder="name")
+            input(type="submit", placeholder="submit")

@@ -1,0 +1,17 @@
+extends layout
+block content
+    - var listOfMovie = movies
+    form(action="searchmovies", method="post")
+        input(type="text", name="movies", placeholder="search")
+        input(type="submit", placeholder="search")
+    
+    if movies
+        each movie in listOfMovie['Search']
+            h3 Title: #{movie.Title}
+            img(src="#{movie.Poster}", alt="#{movie.Title}", width="100px") 
+            ul  
+                li Year: #{movie.Year}
+                li imdbID: #{movie.imdbID}
+                li Type: #{movie.Type}
+        
+
