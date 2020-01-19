@@ -7,4 +7,10 @@ a {
   color: #00B7FF;
 }
 
+.film-container {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px black solid;
+  display: flex;
+}
 
