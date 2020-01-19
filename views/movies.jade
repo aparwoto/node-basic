@@ -7,11 +7,14 @@ block content
     
     if movies
         each movie in listOfMovie['Search']
-            h3 Title: #{movie.Title}
-            img(src="#{movie.Poster}", alt="#{movie.Title}", width="100px") 
-            ul  
-                li Year: #{movie.Year}
-                li imdbID: #{movie.imdbID}
-                li Type: #{movie.Type}
+            div.film-container
+                div.film-container-left
+                    h3 Title: #{movie.Title}
+                    img(src="#{movie.Poster}", alt="#{movie.Title}", width="100px") 
+                div.film-container-right
+                    ul  
+                        li Year: #{movie.Year}
+                        li imdbID: #{movie.imdbID}
+                        li Type: #{movie.Type}
         
 
